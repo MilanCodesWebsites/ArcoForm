@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        </style>
+    <style>
+        body {
+            font-family: "Nunito";
+            background-color: #f4f4f4;
+           
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            margin: auto;
+        }
+        .form-container img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .form-group .required::after {
+            content: "*";
+            color: red;
+            margin-left: 5px;
+        }
+        .form-group .rating {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .rating label {
+            flex: 1;
+            text-align: center;
+        }
+        .form-group .rating input {
+            margin-right: 5px;
+        }
+        .form-submit {
+            text-align: center;
+        }
+        .form-submit button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-submit button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<br>
+<div class="form-container">
+    <img src="logo2.jpg" width="500px" alt="Logo">
+    <h2>Customer Feedback</h2>
+    <form action="https://submit-form.com/7Xl4oXv8T" method="POST">
+        <div class="form-group">
+            <label for="name" class="required">Name of Customer</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="business-contact" class="required">Name of Business Contact</label>
+            <input type="text" id="business-contact" name="business-contact" required>
+        </div>
+        <div class="form-group">
+            <label for="telephone" class="required">Telephone</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>
+        <div class="form-group">
+            <label for="email" class="required">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="designation" class="required">Designation</label>
+            <input type="text" id="designation" name="designation" required>
+        </div>
+        <div class="form-group">
+            <label for="job-number" class="required">Job Number</label>
+            <input type="text" id="job-number" name="job-number" required>
+        </div>
+        <div class="form-group">
+            <label for="project-name" class="required">Project Name</label>
+            <input type="text" id="project-name" name="project-name" required>
+        </div>
+        <div class="form-group">
+            <label class="required">Response to Enquiry</label>
+            <div class="rating">
+                <label><input type="radio" name="response-to-enquiry" value="1" required> Poor</label>
+                <label><input type="radio" name="response-to-enquiry" value="2" required> Average</label>
+                <label><input type="radio" name="response-to-enquiry" value="3" required> Good</label>
+                <label><input type="radio" name="response-to-enquiry" value="4" required> Very Good</label>
+                <label><input type="radio" name="response-to-enquiry" value="5" required> Excellent</label>
+            </div>
+            <textarea name="response-to-enquiry-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">Attitude of Seconded Personnel</label>
+            <div class="rating">
+                <label><input type="radio" name="attitude-of-personnel" value="1" required> Poor</label>
+                <label><input type="radio" name="attitude-of-personnel" value="2" required> Average</label>
+                <label><input type="radio" name="attitude-of-personnel" value="3" required> Good</label>
+                <label><input type="radio" name="attitude-of-personnel" value="4" required> Very Good</label>
+                <label><input type="radio" name="attitude-of-personnel" value="5" required> Excellent</label>
+            </div>
+            <textarea name="attitude-of-personnel-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">Quality of Service Delivery</label>
+            <div class="rating">
+                <label><input type="radio" name="service-delivery" value="1" required> Poor</label>
+                <label><input type="radio" name="service-delivery" value="2" required> Average</label>
+                <label><input type="radio" name="service-delivery" value="3" required> Good</label>
+                <label><input type="radio" name="service-delivery" value="4" required> Very Good</label>
+                <label><input type="radio" name="service-delivery" value="5" required> Excellent</label>
+            </div>
+            <textarea name="service-delivery-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">Skill of Seconded Personnel</label>
+            <div class="rating">
+                <label><input type="radio" name="skill-of-personnel" value="1" required> Poor</label>
+                <label><input type="radio" name="skill-of-personnel" value="2" required> Average</label>
+                <label><input type="radio" name="skill-of-personnel" value="3" required> Good</label>
+                <label><input type="radio" name="skill-of-personnel" value="4" required> Very Good</label>
+                <label><input type="radio" name="skill-of-personnel" value="5" required> Excellent</label>
+            </div>
+            <textarea name="skill-of-personnel-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">Handling of Operational Issues</label>
+            <div class="rating">
+                <label><input type="radio" name="operational-issues" value="1" required> Poor</label>
+                <label><input type="radio" name="operational-issues" value="2" required> Average</label>
+                <label><input type="radio" name="operational-issues" value="3" required> Good</label>
+                <label><input type="radio" name="operational-issues" value="4" required> Very Good</label>
+                <label><input type="radio" name="operational-issues" value="5" required> Excellent</label>
+            </div>
+            <textarea name="operational-issues-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">HSE Performance</label>
+            <div class="rating">
+                <label><input type="radio" name="hse-performance" value="1" required> Poor</label>
+                <label><input type="radio" name="hse-performance" value="2" required> Average</label>
+                <label><input type="radio" name="hse-performance" value="3" required> Good</label>
+                <label><input type="radio" name="hse-performance" value="4" required> Very Good</label>
+                <label><input type="radio" name="hse-performance" value="5" required> Excellent</label>
+            </div>
+            <textarea name="hse-performance-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">Mobilization to Site</label>
+            <div class="rating">
+                <label><input type="radio" name="mobilization-to-site" value="1" required> Poor</label>
+                <label><input type="radio" name="mobilization-to-site" value="2" required> Average</label>
+                <label><input type="radio" name="mobilization-to-site" value="3" required> Good</label>
+                <label><input type="radio" name="mobilization-to-site" value="4" required> Very Good</label>
+                <label><input type="radio" name="mobilization-to-site" value="5" required> Excellent</label>
+            </div>
+            <textarea name="mobilization-to-site-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="required">Reporting to Work by Personnel</label>
+            <div class="rating">
+                <label><input type="radio" name="reporting-to-work" value="1" required> Poor</label>
+                <label><input type="radio" name="reporting-to-work" value="2" required> Average</label>
+                <label><input type="radio" name="reporting-to-work" value="3" required> Good</label>
+                <label><input type="radio" name="reporting-to-work" value="4" required> Very Good</label>
+                <label><input type="radio" name="reporting-to-work" value="5" required> Excellent</label>
+            </div>
+            <textarea name="reporting-to-work-comment" placeholder="Comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="additional-info">Additional Information</label>
+            <textarea id="additional-info" name="additional-info" placeholder="Provide any additional information here"></textarea>
+        </div>
+        <div class="form-submit">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
