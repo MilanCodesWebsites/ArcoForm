@@ -78,7 +78,7 @@
         .form-submit button:hover {
             background-color: #45a049;
         }
-        .total-grade-box {
+        .total-grade-box, .percentage-score-box {
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
@@ -107,7 +107,7 @@
 <div class="form-container">
     <img src="logo.jpg" width="500px" alt="Logo">
     <h2>Customer Feedback Form</h2>
-    <form action="https://submit-form.com/7Xl4oXv8T" method="POST">
+    <form action="https://submit-form.com/6YbkOovtb" method="POST">
         <div class="form-group">
             <label for="name" class="required">Name of Customer</label>
             <input type="text" id="name" name="name" required>
@@ -132,12 +132,14 @@
             <label for="job-number" class="required">Job Number</label>
             <input type="text" id="job-number" name="job-number" required>
         </div>
-        <h4>Dear Customer, we implore you to take just about 5 minutes of your time to send us feedback on our overall
-            performance in our service delivery to you. Please tick the boxes below based on your assessment and use
-            the blank space at the end of the page to provide additional information if you wish.
+        <div class="form-group">
+            <label for="project-name" class="required">Project Name</label>
+            <input type="text" id="project-name" name="project-name" required>
+        </div>
+        <h4>Dear customer, we implore you to take some few minutes of your time to send us feedback on our overall performance in our service delivery in order to serve you better. 
+            Kindly tick the circle below based on your assessment and use the blank space at the end of the page to provide additional information if you wish.
             <br>
-            <span>We believe your honest feedback will help us improve our service delivery to you. Thanks for giving us the
-            opportunity to serve you.</span></h4>
+            <span>We believe your honest feedback to help us improve our service delivery to you. Thanks for giving us the opportunity to serve you.</span></h4>
         <div class="form-group">
             <label class="required">How satisfied were you with our Response to Enquiry?</label>
             <div class="rating">
@@ -235,18 +237,20 @@
             <label for="date" class="required">Date</label>
             <input type="date" id="date" name="date" required>
         </div>
-        <div class="form-group">
-            <label for="signature">Signature</label>
-            <input type="text" id="signature" name="signature">
-        </div>
         
         <div class="total-grade-box">
             <label>Total Grade: </label>
             <span id="total-grade">0</span>
         </div>
         
+        <div class="percentage-score-box">
+            <label>Percentage Score: </label>
+            <span id="percentage-score">0%</span>
+        </div>
+
         <input type="hidden" id="total-grade-input" name="total-grade" value="0">
-        
+        <input type="hidden" id="percentage-score-input" name="percentage-score" value="0">
+
         <div class="form-submit">
             <button type="submit">Submit</button>
         </div>
@@ -255,6 +259,8 @@
 
 <script>
     const ratingGroups = document.querySelectorAll('.rating');
+    const maxTotalGrade = ratingGroups.length * 5;
+
     ratingGroups.forEach(group => {
         group.addEventListener('change', calculateTotalGrade);
     });
@@ -267,8 +273,13 @@
                 totalGrade += parseInt(checkedRadio.value);
             }
         });
+
+        const percentageScore = ((totalGrade / maxTotalGrade) * 100).toFixed(2);
+
         document.getElementById('total-grade').innerText = totalGrade;
         document.getElementById('total-grade-input').value = totalGrade;
+        document.getElementById('percentage-score').innerText = percentageScore + '%';
+        document.getElementById('percentage-score-input').value = percentageScore;
     }
 </script>
 
